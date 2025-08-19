@@ -1,0 +1,71 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "add_favorite" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
+    "category_all" : {
+
+    },
+    "English" : {
+
+    },
+    "favorites_title" : {
+
+    },
+    "language_settings" : {
+
+    },
+    "map_title" : {
+
+    },
+    "remove_favorite" : {
+
+    },
+    "tourism_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Title"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ㄘㄨㄜ "
+          }
+        }
+      }
+    },
+    "分類" : {
+
+    },
+    "地圖" : {
+
+    },
+    "收藏" : {
+
+    },
+    "日本語" : {
+
+    },
+    "景點" : {
+
+    },
+    "繁體中文" : {
+
+    },
+    "設定" : {
+
+    }
+  },
+  "version" : "1.0"
+}

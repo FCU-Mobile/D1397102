@@ -3,11 +3,12 @@ import MapKit
 
 // MARK: - 模型與分類
 enum Category: String, CaseIterable, Identifiable {
-    case nature = "自然景觀"
-    case culture = "文化古蹟"
-    case food = "美食景點"
+    case nature = "category_nature"
+    case culture = "category_culture"
+    case food = "category_food"
     
     var id: String { rawValue }
+    var localized: LocalizedStringKey { LocalizedStringKey(rawValue) }
 }
 
 struct TouristSpot: Identifiable, Equatable {
@@ -41,6 +42,31 @@ class FavoritesManager: ObservableObject {
     
     func isFavorite(_ spot: TouristSpot) -> Bool {
         favorites.contains(spot)
+    }
+}
+
+// MARK: - 語言管理器
+class LanguageManager: ObservableObject {
+    @Published var selectedLanguage: String = Locale.current.identifier
+    
+    init() {
+        if let saved = UserDefaults.standard.string(forKey: "AppLanguage") {
+            selectedLanguage = saved
+            UserDefaults.standard.set([saved], forKey: "AppleLanguages")
+        }
+    }
+    
+    func setLanguage(_ lang: String) {
+        selectedLanguage = lang
+        UserDefaults.standard.set([lang], forKey: "AppleLanguages")
+        UserDefaults.standard.set(lang, forKey: "AppLanguage")
+        UserDefaults.standard.synchronize()
+        
+        // 強制刷新 UI
+        UIApplication.shared.windows.first?.rootViewController =
+            UIHostingController(rootView: MainTabView()
+                .environmentObject(FavoritesManager())
+                .environmentObject(self))
     }
 }
 
@@ -87,9 +113,9 @@ struct ContentView: View {
                 CarouselView(images: sampleSpots.map { $0.imageName })
                 
                 Picker("分類", selection: $selectedCategory) {
-                    Text("全部").tag(Category?.none)
+                    Text("category_all").tag(Category?.none)
                     ForEach(Category.allCases) { category in
-                        Text(category.rawValue).tag(Category?.some(category))
+                        Text(category.localized).tag(Category?.some(category))
                     }
                 }
                 .pickerStyle(.segmented)
@@ -105,12 +131,12 @@ struct ContentView: View {
                 }
             }
             .searchable(text: $searchText)
-            .navigationTitle("旅遊景點推薦")
+            .navigationTitle(Text("tourism_title"))
         }
     }
 }
 
-// MARK: - 詳情頁（地圖 + 收藏）
+// MARK: - 詳情頁
 struct DetailView: View {
     let spot: TouristSpot
     @EnvironmentObject var favorites: FavoritesManager
@@ -136,10 +162,13 @@ struct DetailView: View {
                 Button {
                     favorites.toggle(spot)
                 } label: {
-                    Label(favorites.isFavorite(spot) ? "取消收藏" : "加入收藏", systemImage: favorites.isFavorite(spot) ? "heart.fill" : "heart")
-                        .padding()
-                        .background(Color.blue.opacity(0.1))
-                        .cornerRadius(8)
+                    Label(
+                        favorites.isFavorite(spot) ? "remove_favorite" : "add_favorite",
+                        systemImage: favorites.isFavorite(spot) ? "heart.fill" : "heart"
+                    )
+                    .padding()
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(8)
                 }
             }
             .padding()
@@ -160,7 +189,7 @@ struct FavoritesView: View {
                     }
                 }
             }
-            .navigationTitle("我的收藏")
+            .navigationTitle(Text("favorites_title"))
         }
     }
 }
@@ -174,15 +203,30 @@ struct AllSpotsMapView: View {
                     Marker(spot.name, coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude))
                 }
             }
-            .navigationTitle("地圖總覽")
+            .navigationTitle(Text("map_title"))
             .ignoresSafeArea()
         }
+    }
+}
+
+// MARK: - 語言設定頁
+struct LanguageSettingsView: View {
+    @EnvironmentObject var langManager: LanguageManager
+    
+    var body: some View {
+        List {
+            Button("繁體中文") { langManager.setLanguage("zh-Hant") }
+            Button("English") { langManager.setLanguage("en") }
+            Button("日本語") { langManager.setLanguage("ja") }
+        }
+        .navigationTitle(Text("language_settings"))
     }
 }
 
 // MARK: - 分頁畫面
 struct MainTabView: View {
     @StateObject private var favorites = FavoritesManager()
+    @StateObject private var langManager = LanguageManager()
     
     var body: some View {
         TabView {
@@ -200,8 +244,16 @@ struct MainTabView: View {
                 .tabItem {
                     Label("地圖", systemImage: "location.fill")
                 }
+            
+            NavigationStack {
+                LanguageSettingsView()
+            }
+            .tabItem {
+                Label("設定", systemImage: "gear")
+            }
         }
         .environmentObject(favorites)
+        .environmentObject(langManager)
     }
 }
 
@@ -209,3 +261,4 @@ struct MainTabView: View {
 #Preview {
     MainTabView()
 }
+
