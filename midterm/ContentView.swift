@@ -5,88 +5,36 @@ import MapKit
 enum Category: String, CaseIterable, Identifiable {
     case nature = "category_nature"
     case landmark_building = "category_landmark_building"
-    case history="category_history"
-    case religion="category_religion"
+    case history = "category_history"
+    case religion = "category_religion"
+    
     var id: String { rawValue }
     var localized: LocalizedStringKey { LocalizedStringKey(rawValue) }
 }
 
 struct TouristSpot: Identifiable, Equatable {
     let id = UUID()
-    let name: String
-    let description: String
+    let nameKey: String
+    let descriptionKey: String
     let imageName: String
     let latitude: Double
     let longitude: Double
     let category: Category
+    
+    var name: LocalizedStringKey { LocalizedStringKey(nameKey) }
+    var description: LocalizedStringKey { LocalizedStringKey(descriptionKey) }
 }
 
 // MARK: - 假資料
 let sampleSpots = [
-    TouristSpot(
-            name: "spot_taipei101_name",
-            description: "spot_taipei101_desc",
-            imageName: "taipei101",
-            latitude: 25.0330,
-            longitude: 121.5654,
-            category: .landmark_building
-        ),
-        TouristSpot(
-            name: "spot_85tower_name",
-            description: "spot_85tower_desc",
-            imageName: "bawudalou",
-            latitude: 22.6133,
-            longitude: 120.3005,
-            category: .landmark_building
-        ),
-        TouristSpot(
-            name: "spot_sunmoonlake_name",
-            description: "spot_sunmoonlake_desc",
-            imageName: "sunmoonlake",
-            latitude: 23.8659,
-            longitude: 120.9150,
-            category: .nature
-        ),
-        TouristSpot(
-            name: "spot_alishan_name",
-            description: "spot_alishan_desc",
-            imageName: "alishan",
-            latitude: 23.5083,
-            longitude: 120.8020,
-            category: .nature
-        ),
-        TouristSpot(
-            name: "spot_foguangshan_name",
-            description: "spot_foguangshan_desc",
-            imageName: "foguangshan",
-            latitude: 22.7564,
-            longitude: 120.4039,
-            category: .religion
-        ),
-        TouristSpot(
-            name: "spot_tudigong_name",
-            description: "spot_tudigong_desc",
-            imageName: "tudigong",
-            latitude: 25.0027,
-            longitude: 121.5077,
-            category: .religion
-        ),
-        TouristSpot(
-            name: "spot_anping_name",
-            description: "spot_anping_desc",
-            imageName: "anpinggubao",
-            latitude: 23.0013,
-            longitude: 120.1597,
-            category: .history
-        ),
-        TouristSpot(
-            name: "spot_tribe_name",
-            description: "spot_tribe_desc",
-            imageName: "tribe",
-            latitude: 22.5370,
-            longitude: 120.7122,
-            category: .history
-        )
+    TouristSpot(nameKey: "spot_taipei101_name", descriptionKey: "spot_taipei101_desc", imageName: "taipei101", latitude: 25.0330, longitude: 121.5654, category: .landmark_building),
+    TouristSpot(nameKey: "spot_85tower_name", descriptionKey: "spot_85tower_desc", imageName: "bawudalou", latitude: 22.6133, longitude: 120.3005, category: .landmark_building),
+    TouristSpot(nameKey: "spot_sunmoonlake_name", descriptionKey: "spot_sunmoonlake_desc", imageName: "sunmoonlake", latitude: 23.8659, longitude: 120.9150, category: .nature),
+    TouristSpot(nameKey: "spot_alishan_name", descriptionKey: "spot_alishan_desc", imageName: "alishan", latitude: 23.5083, longitude: 120.8020, category: .nature),
+    TouristSpot(nameKey: "spot_foguangshan_name", descriptionKey: "spot_foguangshan_desc", imageName: "foguangshan", latitude: 22.7564, longitude: 120.4039, category: .religion),
+    TouristSpot(nameKey: "spot_tudigong_name", descriptionKey: "spot_tudigong_desc", imageName: "tudigong", latitude: 25.0027, longitude: 121.5077, category: .religion),
+    TouristSpot(nameKey: "spot_anping_name", descriptionKey: "spot_anping_desc", imageName: "anpinggubao", latitude: 23.0013, longitude: 120.1597, category: .history),
+    TouristSpot(nameKey: "spot_tribe_name", descriptionKey: "spot_tribe_desc", imageName: "tribe", latitude: 22.5370, longitude: 120.7122, category: .history)
 ]
 
 // MARK: - 收藏功能
@@ -126,7 +74,6 @@ class LanguageManager: ObservableObject {
         UserDefaults.standard.set(lang, forKey: "AppLanguage")
         UserDefaults.standard.synchronize()
         
-        // 強制刷新 UI
         UIApplication.shared.windows.first?.rootViewController =
             UIHostingController(rootView: MainTabView()
                 .environmentObject(FavoritesManager())
@@ -166,7 +113,7 @@ struct ContentView: View {
     
     var filteredSpots: [TouristSpot] {
         sampleSpots.filter { spot in
-            (searchText.isEmpty || spot.name.contains(searchText)) &&
+            (searchText.isEmpty || spot.nameKey.contains(searchText)) &&
             (selectedCategory == nil || spot.category == selectedCategory)
         }
     }
@@ -326,4 +273,5 @@ struct MainTabView: View {
 #Preview {
     MainTabView()
 }
+
 
