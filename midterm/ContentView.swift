@@ -4,9 +4,9 @@ import MapKit
 // MARK: - 模型與分類
 enum Category: String, CaseIterable, Identifiable {
     case nature = "category_nature"
-    case culture = "category_culture"
-    case food = "category_food"
-    
+    case landmark_building = "category_landmark_building"
+    case history="category_history"
+    case religion="category_religion"
     var id: String { rawValue }
     var localized: LocalizedStringKey { LocalizedStringKey(rawValue) }
 }
@@ -23,9 +23,14 @@ struct TouristSpot: Identifiable, Equatable {
 
 // MARK: - 假資料
 let sampleSpots = [
-    TouristSpot(name: "台北 101", description: "台灣知名地標，高樓觀景。", imageName: "taipei101", latitude: 25.0330, longitude: 121.5654, category: .culture),
+    TouristSpot(name: "台北 101", description: "北台灣知名地標，高樓觀景。", imageName: "taipei101", latitude: 25.0330, longitude: 121.5654, category: .landmark_building),
+    TouristSpot(name: "高雄 85大樓", description: "南台灣知名地標，高樓觀景。", imageName: "bawudalou", latitude: 22.6133, longitude: 120.3005, category: .landmark_building),
     TouristSpot(name: "日月潭", description: "中台灣美麗湖泊，適合划船和騎腳踏車。", imageName: "sunmoonlake", latitude: 23.8659, longitude: 120.9150, category: .nature),
-    TouristSpot(name: "阿里山", description: "以觀日、森林鐵道著稱的高山景點。", imageName: "alishan", latitude: 23.5083, longitude: 120.8020, category: .nature)
+    TouristSpot(name: "阿里山", description: "以觀日、森林鐵道著稱的高山景點。", imageName: "alishan", latitude: 23.5083, longitude: 120.8020, category: .nature),
+    TouristSpot(name: "佛光山", description: "位於高雄市的大型佛教寺院，是知名的宗教與文化景點，設有佛陀紀念館。", imageName: "foguangshan", latitude: 22.7564, longitude: 120.4039, category: .religion),
+    TouristSpot(name: "烘爐地南山福德宮", description: "位於新北市中和區的著名土地公廟，以巨大金爐與台北盆地夜景聞名，是祈福與觀光的熱門地點。", imageName: "tudigong", latitude: 25.0027, longitude: 121.5077, category: .religion),
+    TouristSpot(name: "安平古堡", description: "位於台南市安平區的歷史古蹟，前身為荷蘭人建造的熱蘭遮城，是台灣最具代表性的西式城堡遺址之一。", imageName: "anpinggubao", latitude: 23.0013, longitude: 120.1597, category: .history),
+    TouristSpot(name: "台灣原住民文化園區", description: "位於屏東縣瑪家鄉，展示台灣多元原住民族的文化、藝術及傳統工藝，是了解原住民文化的重要場所。", imageName: "tribe", latitude: 22.5370, longitude: 120.7122, category: .history)
 ]
 
 // MARK: - 收藏功能
@@ -118,7 +123,7 @@ struct ContentView: View {
                         Text(category.localized).tag(Category?.some(category))
                     }
                 }
-                .pickerStyle(.segmented)
+                .pickerStyle(.menu)
                 .padding(.horizontal)
                 
                 List(filteredSpots) { spot in
