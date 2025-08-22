@@ -23,14 +23,70 @@ struct TouristSpot: Identifiable, Equatable {
 
 // MARK: - 假資料
 let sampleSpots = [
-    TouristSpot(name: "台北 101", description: "北台灣知名地標，高樓觀景。", imageName: "taipei101", latitude: 25.0330, longitude: 121.5654, category: .landmark_building),
-    TouristSpot(name: "高雄 85大樓", description: "南台灣知名地標，高樓觀景。", imageName: "bawudalou", latitude: 22.6133, longitude: 120.3005, category: .landmark_building),
-    TouristSpot(name: "日月潭", description: "中台灣美麗湖泊，適合划船和騎腳踏車。", imageName: "sunmoonlake", latitude: 23.8659, longitude: 120.9150, category: .nature),
-    TouristSpot(name: "阿里山", description: "以觀日、森林鐵道著稱的高山景點。", imageName: "alishan", latitude: 23.5083, longitude: 120.8020, category: .nature),
-    TouristSpot(name: "佛光山", description: "位於高雄市的大型佛教寺院，是知名的宗教與文化景點，設有佛陀紀念館。", imageName: "foguangshan", latitude: 22.7564, longitude: 120.4039, category: .religion),
-    TouristSpot(name: "烘爐地南山福德宮", description: "位於新北市中和區的著名土地公廟，以巨大金爐與台北盆地夜景聞名，是祈福與觀光的熱門地點。", imageName: "tudigong", latitude: 25.0027, longitude: 121.5077, category: .religion),
-    TouristSpot(name: "安平古堡", description: "位於台南市安平區的歷史古蹟，前身為荷蘭人建造的熱蘭遮城，是台灣最具代表性的西式城堡遺址之一。", imageName: "anpinggubao", latitude: 23.0013, longitude: 120.1597, category: .history),
-    TouristSpot(name: "台灣原住民文化園區", description: "位於屏東縣瑪家鄉，展示台灣多元原住民族的文化、藝術及傳統工藝，是了解原住民文化的重要場所。", imageName: "tribe", latitude: 22.5370, longitude: 120.7122, category: .history)
+    TouristSpot(
+            name: "spot_taipei101_name",
+            description: "spot_taipei101_desc",
+            imageName: "taipei101",
+            latitude: 25.0330,
+            longitude: 121.5654,
+            category: .landmark_building
+        ),
+        TouristSpot(
+            name: "spot_85tower_name",
+            description: "spot_85tower_desc",
+            imageName: "bawudalou",
+            latitude: 22.6133,
+            longitude: 120.3005,
+            category: .landmark_building
+        ),
+        TouristSpot(
+            name: "spot_sunmoonlake_name",
+            description: "spot_sunmoonlake_desc",
+            imageName: "sunmoonlake",
+            latitude: 23.8659,
+            longitude: 120.9150,
+            category: .nature
+        ),
+        TouristSpot(
+            name: "spot_alishan_name",
+            description: "spot_alishan_desc",
+            imageName: "alishan",
+            latitude: 23.5083,
+            longitude: 120.8020,
+            category: .nature
+        ),
+        TouristSpot(
+            name: "spot_foguangshan_name",
+            description: "spot_foguangshan_desc",
+            imageName: "foguangshan",
+            latitude: 22.7564,
+            longitude: 120.4039,
+            category: .religion
+        ),
+        TouristSpot(
+            name: "spot_tudigong_name",
+            description: "spot_tudigong_desc",
+            imageName: "tudigong",
+            latitude: 25.0027,
+            longitude: 121.5077,
+            category: .religion
+        ),
+        TouristSpot(
+            name: "spot_anping_name",
+            description: "spot_anping_desc",
+            imageName: "anpinggubao",
+            latitude: 23.0013,
+            longitude: 120.1597,
+            category: .history
+        ),
+        TouristSpot(
+            name: "spot_tribe_name",
+            description: "spot_tribe_desc",
+            imageName: "tribe",
+            latitude: 22.5370,
+            longitude: 120.7122,
+            category: .history
+        )
 ]
 
 // MARK: - 收藏功能
@@ -53,16 +109,19 @@ class FavoritesManager: ObservableObject {
 // MARK: - 語言管理器
 class LanguageManager: ObservableObject {
     @Published var selectedLanguage: String = Locale.current.identifier
+    @Published var locale: Locale = Locale.current
     
     init() {
         if let saved = UserDefaults.standard.string(forKey: "AppLanguage") {
             selectedLanguage = saved
+            locale = Locale(identifier: saved)
             UserDefaults.standard.set([saved], forKey: "AppleLanguages")
         }
     }
     
     func setLanguage(_ lang: String) {
         selectedLanguage = lang
+        locale = Locale(identifier: lang)
         UserDefaults.standard.set([lang], forKey: "AppleLanguages")
         UserDefaults.standard.set(lang, forKey: "AppLanguage")
         UserDefaults.standard.synchronize()
@@ -237,28 +296,29 @@ struct MainTabView: View {
         TabView {
             ContentView()
                 .tabItem {
-                    Label("景點", systemImage: "map")
+                    Label("tourism_title", systemImage: "map")
                 }
             
             FavoritesView()
                 .tabItem {
-                    Label("收藏", systemImage: "heart.fill")
+                    Label("favorites_title", systemImage: "heart.fill")
                 }
             
             AllSpotsMapView()
                 .tabItem {
-                    Label("地圖", systemImage: "location.fill")
+                    Label("map_title", systemImage: "location.fill")
                 }
             
             NavigationStack {
                 LanguageSettingsView()
             }
             .tabItem {
-                Label("語言設定", systemImage: "gear")
+                Label("language_settings", systemImage: "gear")
             }
         }
         .environmentObject(favorites)
         .environmentObject(langManager)
+        .environment(\.locale, langManager.locale)
     }
 }
 

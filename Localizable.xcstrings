@@ -53,9 +53,15 @@
     "category_landmark_building" : {
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "landmark_building"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "建築地標"
           }
         }
@@ -112,7 +118,14 @@
       }
     },
     "favorites_title" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收藏"
+          }
+        }
+      }
     },
     "language_settings" : {
       "localizations" : {
@@ -156,6 +169,261 @@
         }
       }
     },
+    "spot_85tower_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iconic skyscraper in southern Taiwan with city views."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "南台灣知名地標，高樓觀景。"
+          }
+        }
+      }
+    },
+    "spot_85tower_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaohsiung 85 Sky Tower"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "高雄 85大樓"
+          }
+        }
+      }
+    },
+    "spot_alishan_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mountain area famous for sunrise views and forest railway."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "以觀日、森林鐵道著稱的高山景點。"
+          }
+        }
+      }
+    },
+    "spot_alishan_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alishan"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "阿里山"
+          }
+        }
+      }
+    },
+    "spot_anping_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historic site in Tainan, originally built by the Dutch as Fort Zeelandia."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "位於台南市安平區的歷史古蹟，前身為荷蘭人建造的熱蘭遮城，是台灣最具代表性的西式城堡遺址之一。"
+          }
+        }
+      }
+    },
+    "spot_anping_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anping Fort"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "安平古堡"
+          }
+        }
+      }
+    },
+    "spot_foguangshan_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Large Buddhist monastery in Kaohsiung with Buddha Memorial Center."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "位於高雄市的大型佛教寺院，是知名的宗教與文化景點，設有佛陀紀念館。"
+          }
+        }
+      }
+    },
+    "spot_foguangshan_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fo Guang Shan"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "佛光山"
+          }
+        }
+      }
+    },
+    "spot_sunmoonlake_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sun Moon Lake"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "中台灣美麗湖泊，適合划船和騎腳踏車。"
+          }
+        }
+      }
+    },
+    "spot_taipei101_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Famous landmark in northern Taiwan, with observatory views."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "北台灣知名地標，高樓觀景。"
+          }
+        }
+      }
+    },
+    "spot_taipei101_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taipei 101"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "台北 101"
+          }
+        }
+      }
+    },
+    "spot_tribe_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cultural park in Pingtung showcasing Taiwan's indigenous heritage, arts, and crafts."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "位於屏東縣瑪家鄉，展示台灣多元原住民族的文化、藝術及傳統工藝，是了解原住民文化的重要場所。"
+          }
+        }
+      }
+    },
+    "spot_tribe_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taiwan Indigenous Peoples Cultural Park"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "台灣原住民文化園區"
+          }
+        }
+      }
+    },
+    "spot_tudigong_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Located in Zhonghe District, New Taipei City, the renowned Tudigong Temple is famous for its massive golden cauldron and stunning night views of the Taipei Basin. It is a popular spot for both prayer and sightseeing."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "位於新北市中和區的著名土地公廟，以巨大金爐與台北盆地夜景聞名，是祈福與觀光的熱門地點。"
+          }
+        }
+      }
+    },
+    "spot_tudigong_name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hongludi Nanshan Fude Temple"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "烘爐地南山福德宮"
+          }
+        }
+      }
+    },
     "tourism_title" : {
       "localizations" : {
         "en" : {
@@ -178,6 +446,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "分類"
+          }
+        }
+      }
+    },
+    "台北 101" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taipei 101"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "台北 101"
           }
         }
       }
@@ -219,7 +504,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "日本語"
+            "value" : "日語"
           }
         }
       }
