@@ -418,7 +418,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "烘爐地南山福德宮"
           }
         }
@@ -434,7 +434,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "旅遊景點推薦"
           }
         }
