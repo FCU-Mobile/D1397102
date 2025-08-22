@@ -254,7 +254,7 @@ struct MainTabView: View {
                 LanguageSettingsView()
             }
             .tabItem {
-                Label("設定", systemImage: "gear")
+                Label("語言設定", systemImage: "gear")
             }
         }
         .environmentObject(favorites)
