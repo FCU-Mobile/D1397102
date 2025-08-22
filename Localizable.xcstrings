@@ -11,7 +11,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "加入收藏"
           }
         }
@@ -27,7 +27,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "所有種類"
           }
         }
@@ -44,7 +44,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "歷史"
           }
         }
@@ -61,7 +61,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "建築地標"
           }
         }
@@ -95,7 +95,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "宗教"
           }
         }
@@ -163,7 +163,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "移除收藏"
           }
         }
@@ -180,7 +180,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "南台灣知名地標，高樓觀景。"
           }
         }
@@ -197,7 +197,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "高雄 85大樓"
           }
         }
@@ -214,7 +214,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "以觀日、森林鐵道著稱的高山景點。"
           }
         }
@@ -231,7 +231,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "阿里山"
           }
         }
@@ -248,7 +248,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "位於台南市安平區的歷史古蹟，前身為荷蘭人建造的熱蘭遮城，是台灣最具代表性的西式城堡遺址之一。"
           }
         }
@@ -265,7 +265,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "安平古堡"
           }
         }
@@ -282,7 +282,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "位於高雄市的大型佛教寺院，是知名的宗教與文化景點，設有佛陀紀念館。"
           }
         }
@@ -299,7 +299,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "佛光山"
           }
         }
@@ -316,7 +316,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "中台灣美麗湖泊，適合划船和騎腳踏車。"
           }
         }
@@ -333,7 +333,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "北台灣知名地標，高樓觀景。"
           }
         }
@@ -350,7 +350,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "台北 101"
           }
         }
@@ -367,7 +367,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "位於屏東縣瑪家鄉，展示台灣多元原住民族的文化、藝術及傳統工藝，是了解原住民文化的重要場所。"
           }
         }
@@ -384,7 +384,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "台灣原住民文化園區"
           }
         }
@@ -401,7 +401,7 @@
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "位於新北市中和區的著名土地公廟，以巨大金爐與台北盆地夜景聞名，是祈福與觀光的熱門地點。"
           }
         }
@@ -468,6 +468,7 @@
       }
     },
     "地圖" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -484,6 +485,7 @@
       }
     },
     "收藏" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hant" : {
           "stringUnit" : {
@@ -510,6 +512,7 @@
       }
     },
     "景點" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hant" : {
           "stringUnit" : {
@@ -536,6 +539,7 @@
       }
     },
     "語言設定" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hant" : {
           "stringUnit" : {
