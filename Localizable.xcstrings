@@ -9,6 +9,12 @@
             "value" : "add_to_favorite"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お気に入りに追加"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22,12 +28,18 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "categpry_all"
+            "value" : "category_all"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべて"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "所有種類"
           }
         }
@@ -40,6 +52,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "history"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歴史"
           }
         },
         "zh-Hant" : {
@@ -59,6 +77,12 @@
             "value" : "landmark_building"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランドマーク"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -74,6 +98,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "nature"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自然"
           }
         },
         "zh-Hant" : {
@@ -93,6 +123,12 @@
             "value" : "religion"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宗教"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -109,6 +145,12 @@
             "value" : "English"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英語"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -119,6 +161,12 @@
     },
     "favorites_title" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お気に入りータイトル"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -135,6 +183,12 @@
             "value" : "language_settings"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語設定"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -145,6 +199,12 @@
     },
     "map_title" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -159,6 +219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "remove_from_favorite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お気に入りから消除"
           }
         },
         "zh-Hant" : {
@@ -178,6 +244,12 @@
             "value" : "Iconic skyscraper in southern Taiwan with city views."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高雄で最も高くて、最も有名な建物"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -193,6 +265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaohsiung 85 Sky Tower"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高雄85スカイタワー"
           }
         },
         "zh-Hant" : {
@@ -212,6 +290,12 @@
             "value" : "Mountain area famous for sunrise views and forest railway."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日の出の景色と森林鉄道で知られる山岳地帯"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -227,6 +311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alishan"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阿里山"
           }
         },
         "zh-Hant" : {
@@ -246,6 +336,12 @@
             "value" : "Historic site in Tainan, originally built by the Dutch as Fort Zeelandia."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四百年前オランダ人に造られる建物"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -261,6 +357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anping Fort"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安平古堡"
           }
         },
         "zh-Hant" : {
@@ -280,6 +382,12 @@
             "value" : "Large Buddhist monastery in Kaohsiung with Buddha Memorial Center."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高雄最大の仏教寺院と仏陀記念センター"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -297,10 +405,33 @@
             "value" : "Fo Guang Shan"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "佛光山"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "佛光山"
+          }
+        }
+      }
+    },
+    "spot_sunmoonlake_desc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "台湾中部にある美しい湖。ボートやサイクリングに最適です。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中台灣美麗湖泊，適合划船和騎腳踏車。"
           }
         }
       }
@@ -314,10 +445,16 @@
             "value" : "Sun Moon Lake"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日月潭"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "中台灣美麗湖泊，適合划船和騎腳踏車。"
+            "value" : "日月潭"
           }
         }
       }
@@ -329,6 +466,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Famous landmark in northern Taiwan, with observatory views."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展望台からの眺めを楽しめる、台湾北部の有名なランドマーク。"
           }
         },
         "zh-Hant" : {
@@ -348,6 +491,12 @@
             "value" : "Taipei 101"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "台北101"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -363,6 +512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cultural park in Pingtung showcasing Taiwan's indigenous heritage, arts, and crafts."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "台湾の先住民族の伝統、芸術、工芸品を展示する屏東の文化公園。"
           }
         },
         "zh-Hant" : {
@@ -382,6 +537,12 @@
             "value" : "Taiwan Indigenous Peoples Cultural Park"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "台湾原住民文化公園"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -397,6 +558,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Located in Zhonghe District, New Taipei City, the renowned Tudigong Temple is famous for its massive golden cauldron and stunning night views of the Taipei Basin. It is a popular spot for both prayer and sightseeing."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新北市中和区にある土址公廟は、巨大な金色の釜と台北盆地の素晴らしい夜景で有名で、参拝や観光に人気のスポットです。"
           }
         },
         "zh-Hant" : {
@@ -416,6 +583,12 @@
             "value" : "Hongludi Nanshan Fude Temple"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "烘爐地南山福徳宮"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -430,6 +603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tourism_Spot"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "観光スポット"
           }
         },
         "zh-Hant" : {
@@ -503,6 +682,12 @@
             "value" : "Japanese"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本語"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -528,6 +713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Traditional Chinese"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繁体字中国語"
           }
         },
         "zh-Hant" : {
