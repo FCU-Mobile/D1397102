@@ -152,6 +152,16 @@ struct DetailView: View {
     let spot: TouristSpot
     @EnvironmentObject var favorites: FavoritesManager
     
+    @State private var region: MKCoordinateRegion
+
+    init(spot: TouristSpot) {
+        self.spot = spot
+        _region = State(initialValue: MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude),
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        ))
+    }
+    
     var body: some View {
         ScrollView {
             Image(spot.imageName)
@@ -162,13 +172,8 @@ struct DetailView: View {
                 Text(spot.name).font(.largeTitle).bold()
                 Text(spot.description)
                 
-                Map(coordinateRegion: .constant(
-                    MKCoordinateRegion(
-                        center: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude),
-                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-                    )
-                ))
-                .frame(height: 200)
+                Map(coordinateRegion: $region)
+                    .frame(height: 200)
                 
                 Button {
                     favorites.toggle(spot)
@@ -186,6 +191,7 @@ struct DetailView: View {
         }
     }
 }
+
 
 // MARK: - 收藏頁
 struct FavoritesView: View {
@@ -207,11 +213,27 @@ struct FavoritesView: View {
 
 // MARK: - 地圖總覽
 struct AllSpotsMapView: View {
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 23.7, longitude: 121.0), // 台灣中部
+        span: MKCoordinateSpan(latitudeDelta: 2.5, longitudeDelta: 2.5)   // 顯示全台
+    )
+    
     var body: some View {
         NavigationStack {
-            Map {
-                ForEach(sampleSpots) { spot in
-                    Marker(spot.name, coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude))
+            Map(coordinateRegion: $region, annotationItems: sampleSpots) { spot in
+                MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude)) {
+                    VStack(spacing: 0) {
+                        Image(systemName: "mappin.circle.fill")
+                            .foregroundColor(.red)
+                            .font(.title)
+                        
+                        Text(spot.name)
+                            .font(.caption)
+                            .fixedSize()
+                            .padding(4)
+                            .background(Color.white.opacity(0.7))
+                            .cornerRadius(5)
+                    }
                 }
             }
             .navigationTitle(Text("map_title"))
@@ -219,6 +241,8 @@ struct AllSpotsMapView: View {
         }
     }
 }
+
+
 
 // MARK: - 語言設定頁
 struct LanguageSettingsView: View {
